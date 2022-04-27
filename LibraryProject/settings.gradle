@@ -1,0 +1,6 @@
+rootProject.name = 'LibraryProject'
+include 'Model'
+include 'Persistance'
+include 'Server'
+include 'Client'
+

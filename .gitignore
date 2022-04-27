@@ -1,0 +1,9 @@
+LibraryProject/.gradle
+LibraryProject/.idea
+LibraryProject/Client/build
+LibraryProject/Model/build
+LibraryProject/Persistance/build
+LibraryProject/Server/build
+
+
+

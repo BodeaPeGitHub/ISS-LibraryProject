@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.google.protobuf' version '0.8.17'
+    id 'idea'
+}
+
+application {
+    mainClass = "StartServer"
+}
+
+group 'iss.library'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    implementation group: 'io.grpc', name: 'grpc-services', version: '1.45.1'
+    implementation 'com.google.protobuf:protobuf-java:3.20.0'
+    runtimeOnly 'io.grpc:grpc-netty-shaded:1.45.1'
+    implementation 'io.grpc:grpc-protobuf:1.45.1'
+    implementation 'io.grpc:grpc-stub:1.45.1'
+    compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
+    compileOnly group: "javax.annotation", name: "javax.annotation-api", version: "1.3.2"
+    compileOnly group: "org.jetbrains", name: "annotations", version: "13.0"
+    implementation project(":Model")
+    implementation project(":Persistance")
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.19.2"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.45.1'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceSets {
+    src {
+        main {
+            java {
+                srcDirs 'build/generated/source/proto/main/grpc'
+                srcDirs 'build/generated/source/proto/main/java'
+            }
+        }
+    }
+}
