@@ -84,6 +84,10 @@ public class BookCellController extends ListCell<Book> {
                         alert.setTitle("Error at borrowing book." + subscriber.getId());
                         alert.show();
                     }
+                    else {
+                        borrowButton.setDisable(true);
+                        notAvailableLabel.setVisible(true);
+                    }
                 });
         for(int i = 0; i < imageList.size(); i++)
             buttonImageViewHashMap.put(buttonList.get(i), imageList.get(i));

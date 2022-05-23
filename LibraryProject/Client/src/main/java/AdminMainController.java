@@ -47,6 +47,7 @@ public class AdminMainController {
         this.librarian = librarian;
         loggedInAsLabel.setText("Logged in as " + librarian.getUsername());
         initModel();
+        searchBar.textProperty().addListener(event -> bookObservableList.setAll(books.stream().filter(book -> book.getName().startsWith(searchBar.getText()) || book.getAuthor().startsWith(searchBar.getText())).toList()));
     }
 
     @FXML
