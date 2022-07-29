@@ -1,6 +1,6 @@
 # ISS - LibraryProject 
 
-## Story:  
+## The story:  
 Project made for the Software Systems Engineering (ro. Ingineria Sistemelor Soft) Course.
 The purpose of the course was to understand how to use diagrams when writing and designing code.   
 The diagrams I used were 
@@ -24,9 +24,9 @@ As a solution, I developed a client-server desktop application in Java with the 
 * gRPC for client-server communication of the application.
 * Hibernate for database management.
 * Gradle as an Automation Tool.
-The data is kept in a SQLite database "library.db".
+The data is kept in a SQLite database named `library.db`.
 
-Here are a few screenshots of the final project: 
+### Here are a few screenshots of the final project: 
 
 The log in window    
 ![Log in window](/Screenshots/log-in-window.png "Log in window")
@@ -44,5 +44,5 @@ The main window for the libraian
 
 ## The diagrams
 
-All the diagrams can be found in the "Models.mdj" that can be opened with "Star UML".   
+All the diagrams can be found in the `Models.mdj` that can be opened with `Star UML`.   
 The `Use Castes.pdf` file contains all the use cases that are implemented in the application.
