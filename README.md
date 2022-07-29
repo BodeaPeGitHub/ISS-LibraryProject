@@ -28,14 +28,21 @@ The data is kept in a SQLite database "library.db".
 
 Here are a few screenshots of the final project: 
 
-<div style="width:250px ; height:400px ; border=2px solid black" >
-  ![Log in window](/ISS-LibraryProject/blob/master/Screenshots/log-in-window.png?raw=True "Log in window")
-</div>
+The log in window    
+![Log in window](/Screenshots/log-in-window.png "Log in window")
 
-<div style="width:250px ; height:400px ; border=2px solid black" >
-  ![Log in window](/ISS-LibraryProject/blob/master/Screenshots/log-in-window.png?raw=True "Log in window")
-</div>
+***
 
-<div style="width:250px ; height:400px ; border=2px solid black" >
-  ![Log in window](/ISS-LibraryProject/blob/master/Screenshots/log-in-window.png?raw=True "Log in window")
-</div>
+The main window for the subscriber    
+![Subscriber main window](/Screenshots/subscriber-main-window.png "Subscriber Main Window")
+
+***
+
+The main window for the libraian    
+![Librarian main window](/Screenshots/librarian-main-window.png "Librarian main window")
+
+
+## The diagrams
+
+All the diagrams can be found in the "Models.mdj" that can be opened with "Star UML".   
+The `Use Castes.pdf` file contains all the use cases that are implemented in the application.
